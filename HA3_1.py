@@ -1,4 +1,7 @@
 # Alexey Obukhov s77673
+# expected input should look like: H2O+Ag3(Fe3O)4
+# expected input your products should look like: NaSO4+H2SO4+I2
+# the programm will calculate the right coefficients for equation
 import re
 import rref
 from sympy import Matrix, lcm
