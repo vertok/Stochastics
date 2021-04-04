@@ -34,7 +34,6 @@ def addToMatrix(element, index, count, side):
     column = elementList.index(element)
     elementMatrix[index][column] += count * side
 
-
 def findElements(segment, index, multiplier, side):
     elementsAndNumbers = re.split('([A-Z][a-z]?)', segment)
     i = 0
@@ -48,7 +47,6 @@ def findElements(segment, index, multiplier, side):
             else:
                 addToMatrix(elementsAndNumbers[i], index, multiplier, side)
 
-
 def compoundDecipher(compound, index, side):
     segments = re.split('(\\([A-Za-z0-9]*\\)[0-9]*)', compound)
     for segment in segments:
@@ -59,7 +57,6 @@ def compoundDecipher(compound, index, side):
         else:
             multiplier = 1
         findElements(segment, index, multiplier, side)
-
 
 for i in range(len(reactants)):
     compoundDecipher(reactants[i], i, 1)
