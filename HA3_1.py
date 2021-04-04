@@ -1,5 +1,6 @@
 # Alexey Obukhov s77673
 import re
+import rref
 from sympy import Matrix, lcm
 
 elementList = []
@@ -67,6 +68,7 @@ for i in range(len(products)):
 
 elementMatrix = Matrix(elementMatrix)
 elementMatrix = elementMatrix.transpose()
+print(elementMatrix.rref)
 solution = elementMatrix.nullspace()[0]
 
 multiple = lcm([val.q for val in solution])
