@@ -71,6 +71,7 @@ elementMatrix = elementMatrix.transpose()
 print(elementMatrix.rref)
 solution = elementMatrix.nullspace()[0]
 
+# calculate the coefficients
 multiple = lcm([val.q for val in solution])
 solution = multiple * solution
 
