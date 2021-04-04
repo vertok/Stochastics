@@ -1,6 +1,10 @@
 import math
 import statistics
 import numpy as np
+
+#define function to calculate cv
+cv = lambda x: np.std(x, ddof=1) / np.mean(x) * 100 
+
 # a
 vector_x = [2, -3, 5, 7, 8, 6, 5, 6, 9, 12]
 vector_y = [4, 7, 6, 9, 14, 17, 23, 20, 17, 30]
@@ -13,5 +17,4 @@ print("variance: ", sample_x)
 # c
 print("covariance Sxy: ", np.cov(vector_x, vector_y)[0][1])
 # d
-coorcoef = np.corrcoef(vector_x, vector_y)[0][1]
-print("coorcoef.: ", coorcoef) 
+print("CV:",cv(vector_x))
